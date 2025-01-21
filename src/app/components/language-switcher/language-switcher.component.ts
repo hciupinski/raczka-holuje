@@ -5,7 +5,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 interface Language {
     code: string;
     label: string;
-    icon: string; // Path to the SVG
+    icon: string;
 }
 
 @Component({

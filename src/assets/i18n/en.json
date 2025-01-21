@@ -42,6 +42,11 @@
     "LANGUAGE_SELECT": "Select Language",
     "LIVE_TRACKING_PAGE": {
         "TITLE": "Live tracking",
-        "DESCRIPTION": "The dedicted link allows You to track the booked tow car."
+        "DESCRIPTION": "The dedicated link allows You to track the booked tow car."
+    },
+    "CALLBAR": {
+      "HELP_IN": "HELP IN",
+      "ON_YOU": "",
+      "TOWING_TRUCK": "TOWING TRUCK 24/7"
     }
 }
