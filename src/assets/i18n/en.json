@@ -1,0 +1,47 @@
+{
+    "HEADER": {
+        "TITLE": "RaczkaHoluje.pl",
+        "SUBTITLE": "Autolaweta 24/7",
+        "NAV": {
+            "HELP": "Help",
+            "ADVICES": "Advices",
+            "TRACKING": "Tracking",
+            "CONTACT": "Contact"
+        }
+    },
+    "HOME": {
+        "HEADER": "NEED HELP?",
+        "SUBHEADER": "Call us!"
+    },
+    "BUTTON": {
+        "QUICK_CALL": "Quick Call"
+    },
+    "OFFERS": {
+        "TOWING": {
+            "TITLE": "Towing",
+            "DESCRIPTION": "Towing your car using newest towing cars."
+        },
+        "ONSITE_REPAIR": {
+            "TITLE": "On site repair",
+            "DESCRIPTION": "Our car drivers are experience mechanics. If it possible we will repair your car."
+        },
+        "LIVE_TRACKING": {
+            "TITLE": "Live Tracking",
+            "DESCRIPTION": "Track your tow truck in real time."
+        }
+    },
+    "PREPARATION_ADVICE": {
+        "TITLE": "Preparation Advice",
+        "DESCRIPTION": "Here are some tips to prepare your car for towing.",
+        "ADVICES": {
+            "REMOVE": "Remove personal items from the vehicle",
+            "ENSURE": "Ensure the parking brake is off",
+            "KEEP": "Keep your phone charged"
+        }
+    },
+    "LANGUAGE_SELECT": "Select Language",
+    "LIVE_TRACKING_PAGE": {
+        "TITLE": "Live tracking",
+        "DESCRIPTION": "The dedicted link allows You to track the booked tow car."
+    }
+}

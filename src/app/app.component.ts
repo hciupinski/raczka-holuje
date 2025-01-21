@@ -1,13 +1,20 @@
+// app.component.ts
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { HeaderComponent } from "./components/header/header.component";
+import { FooterComponent } from "./components/footer/footer.component";
 
 @Component({
-  selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  selector: 'app-root',
+  imports: [CommonModule, RouterModule, TranslateModule, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'raczka-holuje';
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('pl');
+  }
 }

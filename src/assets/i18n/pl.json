@@ -1,0 +1,44 @@
+{
+    "HEADER": {
+        "TITLE": "RaczkaHoluje.pl",
+        "SUBTITLE": "Autolaweta 24/7",
+        "NAV": {
+            "HELP": "Pomoc",
+            "ADVICES": "Porady",
+            "TRACKING": "Śledzenie",
+            "CONTACT": "Kontakt"
+        }
+    },
+    "HOME": {
+        "HEADER": "POTRZEBUJESZ <br/> POMOCY?",
+        "SUBHEADER": ""
+    },
+    "OFFERS": {
+        "TOWING": {
+            "TITLE": "Autolaweta",
+            "DESCRIPTION": "Wykorzystujemy najnowsze lawety dla bezpieczeństwa Twojego pojazdu."
+        },
+        "ONSITE_REPAIR": {
+            "TITLE": "Naprawa",
+            "DESCRIPTION": "W miarę możliwości nasi doświadczeni kierowcy pomoga naprawić Twoje auto na miejscu."
+        },
+        "LIVE_TRACKING": {
+            "TITLE": "Śledzenie",
+            "DESCRIPTION": "Możliwość śledzenia lawety na żywo."
+        }
+    },
+    "PREPARATION_ADVICE": {
+        "TITLE": "Porady",
+        "DESCRIPTION": "Poniżej kilka porad jak możesz przygotować się w trakcie oczekiwania na lawetę.",
+        "ADVICES": {
+            "REMOVE": "Zabierz rzeczy osobite z pojazdu",
+            "ENSURE": "Upewnij się, że masz zaciągniety hamulec ręczny",
+            "KEEP": "Utrzymuj swój telefon naładowany"
+        }
+    },
+    "LANGUAGE_SELECT": "Wybierz język",
+    "LIVE_TRACKING_PAGE": {
+        "TITLE": "Śledzenie na żywo",
+        "DESCRIPTION": "Dedytkowany link pozwala Ci na śledzenie lawety w drodze do Ciebie."
+    }
+}

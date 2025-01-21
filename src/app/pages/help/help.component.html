@@ -1,0 +1,77 @@
+<section class="w-full flex flex-col md:flex-row text-sm">
+    <div class="flex-1 bg-primary text-black flex items-center justify-center px-6">
+        <div class="flex items-center space-x-3">
+            <a class="phone-button" href="tel:+48791499062">
+                <span class="text-xl md:text-2xl font-bold">
+                    Łódź + 120 km
+                </span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Call Section -->
+<section
+    class="bg-primary bg-car-pattern bg-center bg-cover bg-no-repeat bg-fill bg-opacity-30 text-black py-8 px-4 text-center py-10 min-h-[300px] md:min-h-[400px] flex">
+    <div class="container mx-auto self-center">
+        <h2 class="text-5xl md:text-6xl font-extrabold mb-2 text-primary text-stroke-2 font-jockey"
+            [innerHTML]="'HOME.HEADER' | translate">
+        </h2>
+        <p class="text-xl md:text-4xl mb-4 font-extrabold text-white text-stroke-2 font-jockey">
+            {{ 'HOME.SUBHEADER' | translate}}
+        </p>
+    </div>
+</section>
+
+<app-call-bar />
+<!-- Link to Live Tracking Page -->
+<section class="py-8 px-4 w-full mx-auto py-10">
+    <div class="grid md:grid-cols-3 text-center">
+        <div class="container px-10">
+            <h2 class="text-2xl font-semibold text-primary mb-4">
+                {{ 'OFFERS.TOWING.TITLE' | translate }}
+            </h2>
+            <p class="mb-4">
+                {{ 'OFFERS.TOWING.DESCRIPTION' | translate }}
+            </p>
+        </div>
+        <div class="container px-10">
+            <h2 class="text-2xl font-semibold text-primary mb-4">
+                {{ 'OFFERS.ONSITE_REPAIR.TITLE' | translate }}
+            </h2>
+            <p class="mb-4">
+                {{ 'OFFERS.ONSITE_REPAIR.DESCRIPTION' | translate }}
+            </p>
+        </div>
+        <div class="container px-10">
+            <h2 class="text-2xl font-semibold text-primary mb-4">
+                {{ 'OFFERS.LIVE_TRACKING.TITLE' | translate }}
+            </h2>
+            <p class="mb-4">
+                {{ 'OFFERS.LIVE_TRACKING.DESCRIPTION' | translate }}
+            </p>
+            <!-- Use routerLink to navigate to /tracking route -->
+            <!-- <a [routerLink]="'/tracking'"
+                    class="inline-block bg-primary text-black px-6 py-3 rounded-md font-bold hover:bg-yellow-500 transition-colors">
+                    {{ 'LIVE_TRACKING.TITLE' | translate }}
+                </a> -->
+        </div>
+    </div>
+</section>
+
+<!-- Preparation Advice Section -->
+<section id="advices" class="py-8 px-4 bg-gray-900 py-10">
+    <div class="container text-center mx-auto">
+        <h2 class="text-2xl font-semibold text-primary mb-4">
+            {{ 'PREPARATION_ADVICE.TITLE' | translate }}
+        </h2>
+        <p class="mb-4">
+            {{ 'PREPARATION_ADVICE.DESCRIPTION' | translate }}
+        </p>
+        <ul class="list-disc list-inside">
+            <li>{{ "PREPARATION_ADVICE.ADVICES.REMOVE" | translate }}</li>
+            <li>{{ "PREPARATION_ADVICE.ADVICES.ENSURE" | translate }}</li>
+            <li>{{ "PREPARATION_ADVICE.ADVICES.KEEP" | translate }}</li>
+        </ul>
+    </div>
+</section>

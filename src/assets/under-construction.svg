@@ -1,0 +1,52 @@
+<svg
+  version="1.1"
+  baseProfile="full"
+  width="400"
+  height="300"
+  viewBox="0 0 400 300"
+  xmlns="http://www.w3.org/2000/svg"
+  style="max-width:100%; height:auto;"
+>
+  <!-- Background (optional) -->
+  <rect width="100%" height="100%" fill="none" />
+
+  <!-- Traffic cone -->
+  <!-- Base -->
+  <path
+    d="M170,250 L230,250 L245,210 L155,210 Z"
+    fill="#F28B30"
+  />
+  <!-- Middle stripe -->
+  <path
+    d="M160,210 L240,210 L235,195 L165,195 Z"
+    fill="#ffffff"
+  />
+  <!-- Upper part of cone -->
+  <path
+    d="M177,160 L223,160 L235,195 L165,195 Z"
+    fill="#F28B30"
+  />
+  <!-- Top stripe -->
+  <path
+    d="M180,150 L220,150 L223,160 L177,160 Z"
+    fill="#ffffff"
+  />
+  <!-- Very top piece -->
+  <path
+    d="M190,120 L210,120 L220,150 L180,150 Z"
+    fill="#F28B30"
+  />
+
+  <!-- Text: UNDER CONSTRUCTION -->
+  <text
+    x="50%"
+    y="280"
+    font-size="30"
+    font-weight="bold"
+    fill="#FFFFFF"
+    text-anchor="middle"
+    style="font-family: Arial, sans-serif;"
+  >
+    UNDER CONSTRUCTION
+  </text>
+</svg>
