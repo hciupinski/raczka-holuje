@@ -1,22 +1,20 @@
-<!-- A full-width, three-column row -->
 <section class="w-full flex flex-col md:flex-row text-sm">
 
     <!-- Left Column -->
     <div class="flex-1 bg-primary text-black flex items-center justify-center py-4 px-6 left-angle">
         <div class="flex items-center space-x-3">
-            <!-- Icon in a black circle (clock icon) -->
             <div class="bg-black rounded-full p-2">
                 <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2M12 20c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2M12 20c4.418 0 8-3.582 8-8s-3.582-8-8-8-8
                  3.582-8 8 3.582 8 8 8z" />
                 </svg>
             </div>
             <!-- Text -->
             <span class="font-semibold">
-                POMOC W
+              {{ "CALLBAR.HELP_IN" | translate }}
                 <span class="font-extrabold text-black">30 MIN</span>
-                U CIEBIE
+              {{ "CALLBAR.ON_YOU" | translate }}
             </span>
         </div>
     </div>
@@ -35,20 +33,19 @@
     <!-- Right Column -->
     <div class="flex-1 bg-primary text-black flex items-center justify-center py-4 px-6 right-angle">
         <div class="flex items-center space-x-3">
-            <!-- Icon in a black circle (phone icon) -->
             <div class="bg-black rounded-full p-2">
                 <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M2 3.84C2 3.377 2.37 3 2.827 3h4.57c.38 0 
-                 .72.218.88.56l2.02 4.4a.928.928 0 0 1-.22 1.05l-1.95 
-                 1.77a16.727 16.727 0 0 0 7.07 7.07l1.77-1.95a.93.93 0 0 
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2 3.84C2 3.377 2.37 3 2.827 3h4.57c.38 0
+                 .72.218.88.56l2.02 4.4a.928.928 0 0 1-.22 1.05l-1.95
+                 1.77a16.727 16.727 0 0 0 7.07 7.07l1.77-1.95a.93.93 0 0
                  1 1.06-.22l4.4 2.02c.34.16.56.5.56.88v4.57c0 .458-.377.83-.84.83H20C9.507
                   23 1 14.493 1 4v-.16z" />
                 </svg>
             </div>
             <!-- Text -->
             <span class="font-semibold">
-                AUTOLAWETA 24/7
+                {{ "CALLBAR.TOWING_TRUCK" | translate }}
             </span>
         </div>
     </div>

@@ -40,5 +40,10 @@
     "LIVE_TRACKING_PAGE": {
         "TITLE": "Śledzenie na żywo",
         "DESCRIPTION": "Dedytkowany link pozwala Ci na śledzenie lawety w drodze do Ciebie."
+    },
+    "CALLBAR": {
+      "HELP_IN": "POMOC W",
+      "ON_YOU": "u Ciebie!",
+      "TOWING_TRUCK": "AUTOLAWETA 24/7"
     }
 }

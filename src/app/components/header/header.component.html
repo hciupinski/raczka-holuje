@@ -1,73 +1,67 @@
-<!-- header.component.html -->
 <header class="bg-black text-white fixed top-0 left-0 w-full z-50">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <!-- BRAND / LOGO -->
-        <div class="flex items-center space-x-2">
-            <img src="assets/logo.svg" alt="Logo" class="h-8 w-auto" />
-            <span class="text-primary font-extrabold text-xl">
-                RączkaHoluje
-            </span>
-            <span class="text-sm text-gray-300 font-semibold">
-                AUTOLAWETA 24/7
-            </span>
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <!-- BRAND / LOGO -->
+    <div class="flex items-center space-x-2">
+
+      <img src="assets/logo.svg" alt="Logo" class="h-8 w-auto"/>
+      <span class="text-primary font-extrabold text-xl">
+        <a href="/help" class="text-link">RączkaHoluje</a>
+      </span>
+      <span class="text-sm text-gray-300 font-semibold">
+        {{ "CALLBAR.TOWING_TRUCK" | translate }}
+      </span>
+    </div>
+
+    <!-- DESKTOP NAV (Hidden on mobile) -->
+    <nav class="hidden md:flex space-x-6 font-medium">
+      <div *ngFor="let item of navItems" class="relative group">
+        <button *ngIf="item.hasDropdown; else simpleLink"
+                class="flex items-center focus:outline-none hover:text-primary">
+          {{ item.label | translate }}
+          <span class="ml-1 text-sm">&#9662;</span>
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div *ngIf="item.hasDropdown" class="absolute left-0 mt-2 w-36 bg-white text-black rounded-md shadow-lg opacity-0
+                   group-hover:opacity-100 invisible group-hover:visible transition-all">
+          <ng-container *ngFor="let subItem of item.dropdownItems">
+            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">{{ subItem | translate }}</a>
+          </ng-container>
         </div>
 
-        <!-- DESKTOP NAV (Hidden on mobile) -->
-        <nav class="hidden md:flex space-x-6 font-medium">
-            <!-- Loop over navItems -->
-            <div *ngFor="let item of navItems" class="relative group">
-                <!-- If item has a link and no dropdown, use an <a>. 
-               If you need routerLink, use [routerLink]="item.link" -->
-                <button *ngIf="item.hasDropdown; else simpleLink"
-                    class="flex items-center focus:outline-none hover:text-primary">
-                    {{ item.label | translate }}
-                    <span class="ml-1 text-sm">&#9662;</span>
-                </button>
+        <!-- If no dropdown, just render a link -->
+        <ng-template #simpleLink>
+          <a [href]="item.link" class="hover:text-primary">{{ item.label | translate }}</a>
+        </ng-template>
+      </div>
+      <app-language-switcher/>
+    </nav>
 
-                <!-- Dropdown Menu -->
-                <div *ngIf="item.hasDropdown" class="absolute left-0 mt-2 w-36 bg-white text-black rounded-md shadow-lg opacity-0 
-                   group-hover:opacity-100 invisible group-hover:visible transition-all">
-                    <ng-container *ngFor="let subItem of item.dropdownItems">
-                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">{{ subItem | translate }}</a>
-                    </ng-container>
-                </div>
+    <!-- MOBILE NAV TOGGLE BUTTON (Visible on mobile only) -->
+    <button class="block md:hidden focus:outline-none" (click)="toggleMobileMenu()">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+           xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
 
-                <!-- If no dropdown, just render a link -->
-                <ng-template #simpleLink>
-                    <a [href]="item.link" class="hover:text-primary">{{ item.label | translate }}</a>
-                </ng-template>
-            </div>
-            <app-language-switcher />
-        </nav>
-
-        <!-- MOBILE NAV TOGGLE BUTTON (Visible on mobile only) -->
-        <button class="block md:hidden focus:outline-none" (click)="toggleMobileMenu()">
-            <!-- Simple "hamburger" icon -->
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-    </div>
-
-    <!-- MOBILE NAV MENU (Visible when isMobileMenuOpen = true) -->
-    <div class="md:hidden bg-black text-white" *ngIf="isMobileMenuOpen">
-        <nav class="px-4 pb-3">
-            <div *ngFor="let item of navItems" class="py-2 border-b border-gray-700">
-                <!-- If item has dropdown, show a simpler mobile structure 
-               or optionally implement a second toggle for submenus -->
-                <div *ngIf="item.hasDropdown; else mobileSimpleLink">
-                    <span class="font-semibold">{{ item.label | translate }}</span>
-                    <ul class="mt-2 ml-4 text-sm">
-                        <li *ngFor="let subItem of item.dropdownItems" class="py-1">
-                            <a href="#" class="hover:text-primary">{{ subItem | translate }}</a>
-                        </li>
-                    </ul>
-                </div>
-                <ng-template #mobileSimpleLink>
-                    <a [href]="item.link" class="hover:text-primary">{{ item.label | translate }}</a>
-                </ng-template>
-            </div>
-        </nav>
-    </div>
+  <!-- MOBILE NAV MENU (Visible when isMobileMenuOpen = true) -->
+  <div class="md:hidden bg-black text-white" *ngIf="isMobileMenuOpen">
+    <nav class="px-4 pb-3">
+      <div *ngFor="let item of navItems" class="py-2 border-b border-gray-700">
+        <div *ngIf="item.hasDropdown; else mobileSimpleLink">
+          <span class="font-semibold">{{ item.label | translate }}</span>
+          <ul class="mt-2 ml-4 text-sm">
+            <li *ngFor="let subItem of item.dropdownItems" class="py-1">
+              <a href="#" class="hover:text-primary">{{ subItem | translate }}</a>
+            </li>
+          </ul>
+        </div>
+        <ng-template #mobileSimpleLink>
+          <a [href]="item.link" class="hover:text-primary">{{ item.label | translate }}</a>
+        </ng-template>
+      </div>
+    </nav>
+  </div>
 </header>
